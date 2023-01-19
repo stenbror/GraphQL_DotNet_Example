@@ -11,6 +11,8 @@ var app = builder.Build();
 
 app.MapGraphQL();
 
+app.MapGet("/", () => Results.Redirect("/graphql", true));
+
 app.Run();
 
 
